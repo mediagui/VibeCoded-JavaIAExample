@@ -1,5 +1,6 @@
 package com.example.iaexample.service;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +23,11 @@ public class DeepseekService {
 
     public DeepseekService(DeepseekProperties properties, RestTemplateBuilder builder) {
         this.properties = properties;
-        this.restTemplate = builder.build();
+        Duration timeout = Duration.ofMillis(properties.getTimeout());
+        this.restTemplate = builder
+                .setConnectTimeout(timeout)
+                .setReadTimeout(timeout)
+                .build();
     }
 
     public DeepseekResponse consultarDeepseek(String prompt) {
@@ -53,6 +58,7 @@ public class DeepseekService {
         request.setModel(properties.getModel());
         request.setTemperature(properties.getTemperature());
         request.setMaxTokens(properties.getMaxTokens());
+        request.setStream(false);
 
         List<DeepseekMessage> messages = new ArrayList<>();
         messages.add(new DeepseekMessage("user", prompt));
