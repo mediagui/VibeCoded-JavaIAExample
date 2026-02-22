@@ -1,8 +1,12 @@
 package com.example.iaexample.dto.deepseek;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class DeepseekChoice {
     private Integer index;
     private DeepseekMessage message;
+
+    @JsonProperty("finish_reason")
     private String finishReason;
 
     public DeepseekChoice() {

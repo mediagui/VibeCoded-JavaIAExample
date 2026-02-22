@@ -9,6 +9,7 @@ public class DeepseekRequest {
     private String model;
     private List<DeepseekMessage> messages;
     private Double temperature;
+    private Boolean stream;
 
     @JsonProperty("max_tokens")
     private Integer maxTokens;
@@ -22,6 +23,7 @@ public class DeepseekRequest {
         this.messages = messages;
         this.temperature = temperature;
         this.maxTokens = maxTokens;
+        this.stream = false;
     }
 
     public String getModel() {
@@ -54,5 +56,13 @@ public class DeepseekRequest {
 
     public void setMaxTokens(Integer maxTokens) {
         this.maxTokens = maxTokens;
+    }
+
+    public Boolean getStream() {
+        return stream;
+    }
+
+    public void setStream(Boolean stream) {
+        this.stream = stream;
     }
 }
