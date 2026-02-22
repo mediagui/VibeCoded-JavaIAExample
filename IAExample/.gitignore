@@ -35,3 +35,7 @@ build/
 # Plugins
 *.code-workspace
 .history/
+
+### Application Logs ###
+app.log
+*.log
