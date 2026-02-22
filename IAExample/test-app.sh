@@ -12,7 +12,7 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-API_KEY="sk-b0763145c9784db9bbb07b64b13421c4"
+API_KEY="your-api-key-here"
 BASE_URL="http://localhost:8080"
 APP_PID=""
 
