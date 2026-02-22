@@ -1,5 +1,7 @@
 package com.example.iaexample.service;
 
+import java.util.Objects;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
 import org.springframework.stereotype.Service;
@@ -16,9 +18,13 @@ public class OllamaService {
     public String consultarOllama(String prompt) {
         try {
             ChatResponse response = chatClient.prompt()
-                    .user(prompt)
+                    .user(Objects.requireNonNull(prompt, "prompt"))
                     .call()
                     .chatResponse();
+
+            if (response == null) {
+                throw new RuntimeException("No se recibió respuesta de Ollama");
+            }
 
             return response.getResult().getOutput().getContent();
         } catch (Exception e) {
@@ -30,7 +36,7 @@ public class OllamaService {
     public ChatResponse consultarOllamaCompleto(String prompt) {
         try {
             return chatClient.prompt()
-                    .user(prompt)
+                    .user(Objects.requireNonNull(prompt, "prompt"))
                     .call()
                     .chatResponse();
         } catch (Exception e) {
