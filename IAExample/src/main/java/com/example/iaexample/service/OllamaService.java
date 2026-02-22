@@ -2,12 +2,11 @@ package com.example.iaexample.service;
 
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.model.ChatResponse;
-import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.stereotype.Service;
 
 @Service
 public class OllamaService {
-    
+
     private final ChatClient chatClient;
 
     public OllamaService(ChatClient.Builder chatClientBuilder) {
@@ -20,7 +19,7 @@ public class OllamaService {
                     .user(prompt)
                     .call()
                     .chatResponse();
-            
+
             return response.getResult().getOutput().getContent();
         } catch (Exception e) {
             throw new RuntimeException(

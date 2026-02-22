@@ -50,10 +50,10 @@ public class IAController {
 
             // Extraer la respuesta
             String respuesta = chatResponse.getResult().getOutput().getContent();
-            
+
             // Obtener metadata
             String modelo = chatResponse.getMetadata().getModel();
-            Integer tokensUtilizados = chatResponse.getMetadata().getUsage() != null 
+            Integer tokensUtilizados = chatResponse.getMetadata().getUsage() != null
                     ? chatResponse.getMetadata().getUsage().getTotalTokens().intValue()
                     : 0;
 
