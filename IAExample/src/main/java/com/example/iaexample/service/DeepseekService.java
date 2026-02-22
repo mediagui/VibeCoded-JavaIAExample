@@ -26,14 +26,9 @@ public class DeepseekService {
     }
 
     public DeepseekResponse consultarDeepseek(String prompt) {
-        if (properties.getKey() == null || properties.getKey().isEmpty()) {
-            throw new RuntimeException("DEEPSEEK_API_KEY no está configurada");
-        }
-
         DeepseekRequest request = construirSolicitud(prompt);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer " + properties.getKey());
         headers.set("Content-Type", "application/json");
 
         try {
@@ -45,10 +40,11 @@ public class DeepseekService {
             if (response.getStatusCode() == HttpStatus.OK && response.getBody() != null) {
                 return response.getBody();
             } else {
-                throw new RuntimeException("Error al consultar Deepseek: " + response.getStatusCode());
+                throw new RuntimeException("Error al consultar Ollama: " + response.getStatusCode());
             }
         } catch (Exception e) {
-            throw new RuntimeException("Error al comunicarse con la API de Deepseek: " + e.getMessage(), e);
+            throw new RuntimeException(
+                    "Error al comunicarse con Ollama (¿está corriendo 'ollama serve'?): " + e.getMessage(), e);
         }
     }
 
@@ -69,6 +65,6 @@ public class DeepseekService {
         if (response.getChoices() != null && !response.getChoices().isEmpty()) {
             return response.getChoices().get(0).getMessage().getContent();
         }
-        throw new RuntimeException("No se obtuvo respuesta válida de Deepseek");
+        throw new RuntimeException("No se obtuvo respuesta válida de Ollama");
     }
 }

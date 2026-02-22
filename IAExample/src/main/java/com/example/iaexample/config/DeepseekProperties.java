@@ -12,6 +12,7 @@ public class DeepseekProperties {
     private Double temperature;
     private Integer maxTokens;
     private Integer timeout;
+    private Boolean stream = false;
 
     public DeepseekProperties() {
     }
@@ -62,5 +63,13 @@ public class DeepseekProperties {
 
     public void setTimeout(Integer timeout) {
         this.timeout = timeout;
+    }
+
+    public Boolean getStream() {
+        return stream;
+    }
+
+    public void setStream(Boolean stream) {
+        this.stream = stream;
     }
 }
