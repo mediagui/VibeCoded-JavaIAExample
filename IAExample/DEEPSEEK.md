@@ -1,8 +1,45 @@
-# Integración de Deepseek - Guía de Uso
+# Integración de IA - Guía de Uso
+
+> **🆕 ACTUALIZACIÓN**: Este proyecto ahora soporta **Ollama** para ejecutar modelos IA localmente sin necesidad de APIs externas. Ver [OLLAMA_SETUP.md](OLLAMA_SETUP.md) para la guía completa de instalación y configuración.
 
 ## Overview
 
-La aplicación ahora integra **Deepseek AI** para procesar consultas inteligentes sobre los datos del sistema escolar. El nuevo endpoint permite realizar preguntas en lenguaje natural que serán procesadas por la IA.
+La aplicación integra IA para procesar consultas inteligentes sobre los datos del sistema escolar. Soporta dos opciones:
+
+1. **Ollama (Recomendado)**: Modelos IA locales - Sin costos, privado, sin límites
+2. **Deepseek AI**: API externa - Requiere cuenta y API key
+
+El endpoint permite realizar preguntas en lenguaje natural que serán procesadas por la IA.
+
+---
+
+## Opción 1: Ollama (Modelos Locales) ⭐
+
+**Ver documentación completa en [OLLAMA_SETUP.md](OLLAMA_SETUP.md)**
+
+Ventajas:
+- ✅ Completamente gratis
+- ✅ Privacidad total (datos locales)
+- ✅ Sin límites de requests
+- ✅ Funciona sin Internet
+
+**Configuración rápida**:
+```bash
+# Instalar
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Descargar modelo
+ollama pull qwen2
+
+# Iniciar (automático como servicio)
+ollama serve
+```
+
+El proyecto ya está pre-configurado para usar Ollama en `application.properties`.
+
+---
+
+## Opción 2: Deepseek AI (API Externa)
 
 ## Configuración
 
