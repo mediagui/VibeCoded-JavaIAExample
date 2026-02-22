@@ -1,0 +1,94 @@
+# IAExample - Application Properties Examples
+# Copia este archivo a src/main/resources/application.properties y ajusta según tu configuración
+
+# ===========================================
+# H2 Database Configuration
+# ===========================================
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+# ===========================================
+# JPA Configuration
+# ===========================================
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+
+# ===========================================
+# SQL Scripts
+# ===========================================
+spring.sql.init.mode=always
+spring.sql.init.schema-locations=classpath:schema.sql
+spring.sql.init.data-locations=classpath:data.sql
+
+# ===========================================
+# H2 Console
+# ===========================================
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# ===========================================
+# AI CONFIGURATION - ELIGE UNA OPCIÓN
+# ===========================================
+
+# -----------------------------------------
+# OPCIÓN 1: OLLAMA (Local - Recomendado)
+# -----------------------------------------
+# Modelos IA ejecutados localmente sin costos
+# Requiere tener Ollama instalado y corriendo
+# Ver: OLLAMA_SETUP.md
+
+deepseek.api.url=http://localhost:11434/api/chat
+deepseek.api.key=not-required
+deepseek.api.model=qwen2
+deepseek.api.temperature=0.7
+deepseek.api.max-tokens=2000
+deepseek.api.timeout=60000
+deepseek.api.stream=false
+
+# Modelos disponibles (descarga con: ollama pull modelo):
+# - qwen2:1.5b   (~900MB)  - Ultra ligero, rápido
+# - gemma:2b     (~1.4GB)  - Ligero, Google
+# - phi3         (~2.3GB)  - Microsoft, eficiente
+# - llama3.2     (~2GB)    - Meta, versátil
+# - qwen2        (~4.4GB)  - Default, balance calidad/tamaño
+
+# -----------------------------------------
+# OPCIÓN 2: DEEPSEEK API (Requiere cuenta)
+# -----------------------------------------
+# API externa de Deepseek
+# Requiere API key y tiene límites/costos
+# Ver: DEEPSEEK.md
+
+# deepseek.api.url=https://api.deepseek.com/chat/completions
+# deepseek.api.key=${DEEPSEEK_API_KEY:}
+# deepseek.api.model=deepseek-chat
+# deepseek.api.temperature=0.7
+# deepseek.api.max-tokens=2000
+# deepseek.api.timeout=30000
+# deepseek.api.stream=false
+
+# ===========================================
+# PARÁMETROS DEL MODELO
+# ===========================================
+
+# Temperature (0.0 - 1.0):
+#   0.0 = Respuestas deterministas, precisas
+#   0.7 = Balance creatividad/coherencia (recomendado)
+#   1.0 = Respuestas creativas, variables
+
+# Max Tokens:
+#   Número máximo de tokens en la respuesta
+#   Mayor número = respuestas más largas = más lento
+#   Recomendado: 1000-2000
+
+# Timeout (milisegundos):
+#   Tiempo máximo de espera para respuesta
+#   Ollama: 60000 (1 min) para modelos locales
+#   Deepseek: 30000 (30 seg) para API externa
+
+# Stream:
+#   true  = Respuestas en streaming (tiempo real)
+#   false = Respuesta completa al final
