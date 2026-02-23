@@ -120,3 +120,4 @@ El sistema enriquece automáticamente el prompt con el contexto de la base de da
 - [API_ENDPOINTS.md](doc/API_ENDPOINTS.md) - Documentación completa de endpoints
 - [DATABASE_MODEL.md](doc/DATABASE_MODEL.md) - Modelo de base de datos
 - [DOCKER.md](doc/DOCKER.md) - Instrucciones de Docker
+- [TEST_SUMMARY.md](doc/TEST_SUMMARY.md) - Resumen completo de tests
