@@ -2,8 +2,12 @@
 
 # Script para lanzar y probar la aplicación completa con Deepseek AI
 # Incluye la API key y realiza pruebas de todos los endpoints
+# Uso: ./sh/test-app.sh o cd sh && ./test-app.sh
 
 set -e
+
+# Change to project root directory
+cd "$(dirname "$0")/.." || exit 1
 
 # Colores para output
 RED='\033[0;31m'

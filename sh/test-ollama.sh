@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Script para probar la integración con Ollama
-# Uso: ./test-ollama.sh
+# Uso: ./sh/test-ollama.sh o cd sh && ./test-ollama.sh
+
+# Change to project root directory
+cd "$(dirname "$0")/.." || exit 1
 
 echo "======================================"
 echo "Test de Integración con Ollama"

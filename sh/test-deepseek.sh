@@ -3,6 +3,10 @@
 # Script para probar el endpoint de Deepseek
 # Asegúrate de que la aplicación está corriendo en http://localhost:8080
 # y que DEEPSEEK_API_KEY está configurada
+# Uso: ./sh/test-deepseek.sh o cd sh && ./test-deepseek.sh
+
+# Change to project root directory
+cd "$(dirname "$0")/.." || exit 1
 
 BASE_URL="http://localhost:8080"
 IA_ENDPOINT="$BASE_URL/api/ia/consultar"

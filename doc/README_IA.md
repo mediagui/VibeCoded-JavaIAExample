@@ -46,7 +46,7 @@ POST /api/ia/consultar
 1. **DEEPSEEK_QUICKSTART.md** - Inicio en 5 minutos ⭐
 2. **DEEPSEEK.md** - Guía completa con ejemplos
 3. **EJEMPLOS_USO.md** - 8 lenguajes diferentes
-4. **test-deepseek.sh** - Script de validación
+4. **sh/test-deepseek.sh** - Script de validación
 5. **INTEGRACION_DEEPSEEK_RESUMEN.md** - Detalles técnicos
 6. **.env.example** - Variables de configuración
 
@@ -154,7 +154,8 @@ IAExample/
 ├── DEEPSEEK.md ✨ NUEVO
 ├── EJEMPLOS_USO.md ✨ NUEVO
 ├── INTEGRACION_DEEPSEEK_RESUMEN.md ✨ NUEVO
-├── test-deepseek.sh ✨ NUEVO
+├── sh/
+│   └── test-deepseek.sh ✨ NUEVO
 └── .env.example (actualizado)
 ```
 
@@ -216,7 +217,7 @@ IAExample/
 
 ### Manual
 ```bash
-bash test-deepseek.sh
+bash sh/test-deepseek.sh
 # Ejecuta 5 tests automáticos
 ```
 
@@ -397,7 +398,7 @@ La integración de **Deepseek AI** está **completamente funcional**:
 |---------|-----------|----------|
 | DEEPSEEK_QUICKSTART.md | Empezar en 5 min | **LEER PRIMERO** |
 | .env.example | Configurar variables | **CONFIGURAR** |
-| test-deepseek.sh | Validar instalación | **EJECUTAR** |
+| sh/test-deepseek.sh | Validar instalación | **EJECUTAR** |
 | EJEMPLOS_USO.md | Integrar en código | **DESPUÉS** |
 | DEEPSEEK.md | Referencia completa | Consultar según necesite |
 

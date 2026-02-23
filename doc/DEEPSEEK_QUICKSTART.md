@@ -70,7 +70,7 @@ curl -X POST http://localhost:8080/api/ia/consultar \
 
 4. **Documentación**
    - `DEEPSEEK.md` - Guía completa
-   - `test-deepseek.sh` - Script de pruebas
+   - `sh/test-deepseek.sh` - Script de pruebas
 
 5. **Configuración**
    - Actualizado `application.properties` con configuración de Deepseek
@@ -238,7 +238,7 @@ mvn clean compile
 mvn spring-boot:run
 
 # Correr el script de tests
-bash test-deepseek.sh
+bash sh/test-deepseek.sh
 ```
 
 ---

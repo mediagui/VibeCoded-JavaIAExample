@@ -60,7 +60,8 @@ src/main/java/com/example/iaexample/controller/
 /
 ├── DEEPSEEK.md                           # Guía completa de uso
 ├── DEEPSEEK_QUICKSTART.md                # Inicio rápido
-├── test-deepseek.sh                      # Script de pruebas
+├── sh/
+│   └── test-deepseek.sh                  # Script de pruebas
 └── .env.example                          # Actualizado con DEEPSEEK_API_KEY
 ```
 
@@ -187,7 +188,7 @@ mvn clean compile
 # Status: BUILD SUCCESS ✓
 
 # Correr tests
-bash test-deepseek.sh
+bash sh/test-deepseek.sh
 ```
 
 ---
@@ -226,7 +227,7 @@ curl -X POST http://localhost:8080/api/ia/consultar \
 |---------|-----------|
 | `DEEPSEEK.md` | Guía completa con ejemplos, troubleshooting |
 | `DEEPSEEK_QUICKSTART.md` | Inicio rápido en 5 minutos |
-| `test-deepseek.sh` | Script para validar funcionamiento |
+| `sh/test-deepseek.sh` | Script para validar funcionamiento |
 | `.env.example` | Template de variables de entorno |
 
 ---
@@ -274,7 +275,7 @@ curl -X POST http://localhost:8080/api/ia/consultar \
 
 ### Script incluido
 ```bash
-bash test-deepseek.sh
+bash sh/test-deepseek.sh
 ```
 
 Ejecuta 5 tests:

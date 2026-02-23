@@ -24,7 +24,7 @@ El proyecto ha sido configurado para usar **Ollama** con el modelo **qwen2** de 
 ### Archivos Creados:
 1. **OLLAMA_SETUP.md** - Documentación completa de Ollama
 2. **application.properties.example** - Configuraciones de ejemplo
-3. **test-ollama.sh** - Script de testing automatizado
+3. **sh/test-ollama.sh** - Script de testing automatizado
 
 ### Archivos Actualizados:
 1. **README.md** - Añadida sección de Ollama
@@ -53,7 +53,7 @@ mvn spring-boot:run
 ### 4. Probar la integración
 ```bash
 # Opción 1: Script automático
-./test-ollama.sh
+./sh/test-ollama.sh
 
 # Opción 2: Manualmente
 curl -X POST http://localhost:8080/api/ia/consultar \
@@ -124,11 +124,11 @@ ollama pull qwen2
 
 ## ⚡ Ventajas de Ollama
 
-✅ **Gratis** - Sin costos de API  
-✅ **Privado** - Datos procesados localmente  
-✅ **Sin límites** - Requests ilimitados  
-✅ **Offline** - No requiere Internet  
-✅ **Rápido** - Latencia mínima (localhost)  
-✅ **Compatible** - API tipo OpenAI  
+✅ **Gratis** - Sin costos de API
+✅ **Privado** - Datos procesados localmente
+✅ **Sin límites** - Requests ilimitados
+✅ **Offline** - No requiere Internet
+✅ **Rápido** - Latencia mínima (localhost)
+✅ **Compatible** - API tipo OpenAI
 
 ¡Disfruta de tu IA local! 🚀

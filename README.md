@@ -114,6 +114,19 @@ curl -X POST http://localhost:8080/api/ia/consultar \
 
 El sistema enriquece automáticamente el prompt con el contexto de la base de datos (alumnos y asignaturas) para que el modelo IA pueda responder con información actualizada.
 
+## Scripts de Prueba
+
+En la carpeta `sh/` encontrarás scripts para probar la aplicación:
+
+- `sh/test-ollama.sh` - Pruebas de integración con Ollama
+- `sh/test-deepseek.sh` - Pruebas del endpoint de Deepseek
+- `sh/test-app.sh` - Pruebas completas de la aplicación
+
+Ejecución:
+```bash
+./sh/test-ollama.sh
+```
+
 ## Documentación Adicional
 
 - [OLLAMA_SETUP.md](doc/OLLAMA_SETUP.md) - Guía completa de Ollama
