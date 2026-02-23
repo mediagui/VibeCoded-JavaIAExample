@@ -72,7 +72,7 @@ ollama serve
 
 ### Documentación Completa
 
-Ver [OLLAMA_SETUP.md](OLLAMA_SETUP.md) para:
+Ver [OLLAMA_SETUP.md](doc/OLLAMA_SETUP.md) para:
 - Guía completa de instalación en Linux
 - Modelos recomendados y comparativas
 - Configuración del proyecto
@@ -116,7 +116,7 @@ El sistema enriquece automáticamente el prompt con el contexto de la base de da
 
 ## Documentación Adicional
 
-- [OLLAMA_SETUP.md](OLLAMA_SETUP.md) - Guía completa de Ollama
-- [API_ENDPOINTS.md](API_ENDPOINTS.md) - Documentación completa de endpoints
-- [DATABASE_MODEL.md](DATABASE_MODEL.md) - Modelo de base de datos
-- [DOCKER.md](DOCKER.md) - Instrucciones de Docker
+- [OLLAMA_SETUP.md](doc/OLLAMA_SETUP.md) - Guía completa de Ollama
+- [API_ENDPOINTS.md](doc/API_ENDPOINTS.md) - Documentación completa de endpoints
+- [DATABASE_MODEL.md](doc/DATABASE_MODEL.md) - Modelo de base de datos
+- [DOCKER.md](doc/DOCKER.md) - Instrucciones de Docker

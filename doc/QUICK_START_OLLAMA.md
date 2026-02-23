@@ -111,7 +111,7 @@ ollama pull qwen2
 ## 📚 Documentación Completa
 
 - **[OLLAMA_SETUP.md](OLLAMA_SETUP.md)** - Guía detallada de instalación, configuración y optimización
-- **[README.md](README.md)** - Documentación general del proyecto
+- **[README.md](../README.md)** - Documentación general del proyecto
 - **[DEEPSEEK.md](DEEPSEEK.md)** - Alternativa con Deepseek API
 
 ## 🎯 Próximos Pasos
